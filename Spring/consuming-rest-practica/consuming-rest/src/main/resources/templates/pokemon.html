@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/5.2.3/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    <title>Spring consuming rest example</title>
+
+</head>
+
+
+<body>
+<h1>Pokemon Info</h1>
+<form action="/pokemon" method="get">
+    <label for="name">Pokemon Name:</label>
+    <input type="text" id="name" name="name">
+    <button type="submit">Get Info</button>
+</form>
+<pre th:text="${pokemonData}"></pre>
+</body>
+
+</html>
